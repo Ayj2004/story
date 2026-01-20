@@ -1,18 +1,17 @@
-/** 博客文章类型 */
-export interface Post {
+/** 故事类型（核心业务类型） */
+export interface Story {
   id: string | number;
   title: string;
+  author: string;
+  storyType: string;
   cover: string;
   content: string;
-  summary: string;
+  intro: string;
   createTime: string;
   updateTime: string;
-  category?: string;
-  excerpt?: string;
-  author?: string;
 }
 
-/** KV操作返回结果类型 */
+/** KV操作返回结果类型（保留原有） */
 export interface KVResponse<T = any> {
   success: boolean;
   data?: T;
