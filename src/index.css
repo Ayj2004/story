@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义主题变量 - 替换为绿色系主色 */
+:root {
+  --primary: #10b981; /* 绿色主题（Tailwind emerald-500），可根据需求调整 */
+}
+
+/* 全局样式 */
+body {
+  @apply bg-gray-50 text-gray-800;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
