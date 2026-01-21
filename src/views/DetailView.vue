@@ -28,7 +28,7 @@
         </button>
       </div>
 
-      <!-- 故事详情 -->
+      <!-- 故事详情（已包含调节面板） -->
       <StoryDetail v-if="story" :id="story.id" :story="story" />
 
       <!-- 故事不存在 -->
@@ -46,6 +46,7 @@
 </template>
 
 <script setup lang="ts">
+// 原有代码不变（无需修改）
 import { ref, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import type { Story } from "@/types";
@@ -88,3 +89,10 @@ const handleDelete = async () => {
   }
 };
 </script>
+
+<style scoped>
+/* 新增：确保滤镜不影响外层容器 */
+.max-w-3xl {
+  isolation: isolate;
+}
+</style>
