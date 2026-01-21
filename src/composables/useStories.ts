@@ -2,7 +2,7 @@ import { ref, computed } from "vue";
 import type { Story, KVResponse } from "@/types";
 
 // 边缘函数地址（替换为你的实际地址）
-const EDGE_FUNCTION_BASE_URL = "https://kv-test.4fa2a2a9.er.aliyun-esa.net";
+const EDGE_FUNCTION_BASE_URL = "https://kvstory.4fa2a2a9.er.aliyun-esa.net";
 
 export const useStories = () => {
   const stories = ref<Story[]>([]);
